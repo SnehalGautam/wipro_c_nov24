@@ -1,8 +1,22 @@
-#include <stdio.h>
-// Ask the customer if she wish to have Veg or NonVeg and then Show the specific Menu to customer and accept the food-number from the customer and serve her the food.
+//Accept day number from user and print the event of the college fest
+#include<stdio.h>
+int main(){
 
-int main()
-{
+    int daynumber=0;
+    printf("enter the daynum");
+    scanf("%c",&daynumber);
+
+    switch(daynumber){
+case1: printf("monday sports"); break;
+case2: printf("Tuesday Technical"); break;
+case3: printf("Wednesday Cultural"); break;
+case4: printf("Thursday ethnic"); break;
+case5: printf(" friday funky "); break;
+case6: printf("saturday charity"); break;
+default: printf("Go back home and sleep"); break;
+}
+
+// Ask the customer if she wish to have Veg or NonVeg and then Show the specific Menu to customer and accept the food-number from the customer and serve her the food.
     int foodNumber = 0, foodType = 0;
     puts("Welcome to our Hotel \"THE TASTE\"");
     puts("1:Veg 2:NonVeg. Your choice please: ");

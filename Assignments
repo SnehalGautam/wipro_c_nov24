@@ -43,12 +43,11 @@ printf(format,stdout);
 int fscanf(FILE* stream, const char* format,);
 scanf(format,stdin);
 
+//************************************************************************************ */
+                           Day 2- ASSIGNMENTS 
+//************************************************************************************ */
 
-
- Day 2- ASSIGNMENTS
-// start 
-
-//1.check if a number is a perfect square
+ //1.check if a number is a perfect square
 #included<stdio.h>
 int main(){
 
@@ -182,6 +181,7 @@ int main() {
    else {
       printf("%d is not a leap year.", year);
    }
+}
 
 // 8.Declare 3 character variables and accept values, raining=r sunny=s cloudy=c
    Allow the person to go out only if it is:
@@ -193,10 +193,29 @@ int main() {
     char raining='r';
     char sunny='s';
     char cloudy='c';
-    if(raining ==  'r' && (sunny== 's'  || cloudy=='c'));
-    printf("")
+    
+    printf("Enter the weather status for raining ");
+    scanf(" %c", &raining);  
+
+    printf("Enter the weather status for sunny ");
+    scanf(" %c", &sunny);
+
+    printf("Enter the weather status for cloudy ");
+    scanf(" %c", &cloudy);
+
+
+    if(sunny== 's'  && (raining ==  'r'  || cloudy!='c'))
+    {
+       printf("person to go out");
+    }
+    elseif(sunny== 's' && raining !=  'r' && cloudy!='c' )
+    {
+      printf("person to go out");
+    }
     else
-    printf("")
+    {
+      printf("person cannot go out!\n");
+    }
  }
 
 //9.FARMER PROBLEM STATEMENT
@@ -214,3 +233,60 @@ All the crops are sowed at the same time. Mahesh gets the above yield at the abo
 What is
 a. The overall sales achieved by Mahesh from the 80 acres of land.
 b. Sales realisation from chemical-free farming at the end of 11 months?
+
+
+#include <stdio.h>
+int main() {
+   
+    float totalLand = 80.0;
+    float landPerSegment = totalLand / 5;
+
+    
+    float tomatoYield1 = 10.0;  
+    float tomatoYield2 = 12.0;  
+    float potatoYield = 10.0;
+    float cabbageYield = 14.0;
+    float sunflowerYield = 0.7;
+    float sugarcaneYield = 45.0;
+
+    
+    float tomatoPrice = 7.0;  
+    float potatoPrice = 20.0; 
+    float cabbagePrice = 24.0; 
+    float sunflowerPrice = 200.0; 
+    float sugarcanePrice = 4000.0; 
+
+    
+    float tomatoLand = landPerSegment; 
+    float tomatoYieldTotal1 = 0.30 * tomatoLand * tomatoYield1;  
+    float tomatoYieldTotal2 = 0.70 * tomatoLand * tomatoYield2;  
+    float totalTomatoYield = tomatoYieldTotal1 + tomatoYieldTotal2;
+    float totalTomatoRevenue = totalTomatoYield * 1000 * tomatoPrice;  
+
+    
+    float totalPotatoYield = potatoYield * landPerSegment;
+    float totalPotatoRevenue = totalPotatoYield * 1000 * potatoPrice;  
+
+    
+    float totalCabbageYield = cabbageYield * landPerSegment;
+    float totalCabbageRevenue = totalCabbageYield * 1000 * cabbagePrice;  
+
+    
+    float totalSunflowerYield = sunflowerYield * landPerSegment;
+    float totalSunflowerRevenue = totalSunflowerYield * 1000 * sunflowerPrice;  
+
+    
+    float totalSugarcaneYield = sugarcaneYield * landPerSegment;
+    float totalSugarcaneRevenue = totalSugarcaneYield * sugarcanePrice;
+
+    
+    float overallSales = totalTomatoRevenue + totalPotatoRevenue + totalCabbageRevenue + totalSunflowerRevenue + totalSugarcaneRevenue;
+
+
+    float chemicalFreeSales = totalTomatoRevenue + totalPotatoRevenue + totalCabbageRevenue + totalSunflowerRevenue + totalSugarcaneRevenue;
+
+    printf("a. Overall sales achieved by Mahesh from the 80 acres of land: Rs. %.2f\n", overallSales);
+    printf("b. Sales realization from chemical-free farming at the end of 11 months: Rs. %.2f\n", chemicalFreeSales);
+
+    return 0;
+}
