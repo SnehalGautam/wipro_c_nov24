@@ -1,0 +1,7 @@
+Why an un initialized pointer is called as wild pointer ?
+An uninitialized pointer is called a wild pointer because it points to a random, unpredictable memory location. Since it hasn't been given a specific address, it could point to any part of the computer's memory, and using it can cause strange or unexpected behavior in your program.
+
+Just like a "wild" animal can be unpredictable and dangerous, a wild pointer can lead to crashes, data corruption, or other problems in your program.
+
+In simple terms:
+Wild pointer = Uninitialized pointer that points to random memory.
